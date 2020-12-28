@@ -1,0 +1,59 @@
+@import 'colors.scss';
+
+.listItem {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px 0 15px;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+
+    .removeIcon {
+      display: block;
+    }
+  }
+
+  &:nth-child(1) {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  &.active {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+  }
+
+  &__circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .listItem_icon {
+    margin-right: 10px;
+  }
+
+  &__name {
+    font-size: 16px;
+    flex: 1;
+    font-weight: 500;
+    opacity: 0.9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .removeIcon {
+    display: none;
+  }
+}

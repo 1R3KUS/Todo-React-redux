@@ -1,0 +1,105 @@
+@import 'colors';
+@import 'components/all';
+
+.todo-app {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 600px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.allLists {
+  width: 240px;
+  height: 100%;
+  background: $background;
+
+  overflow: none auto;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgb(167, 167, 167);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.allTasks {
+  width: 550px;
+
+  overflow: hidden auto;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgb(167, 167, 167);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.removeIcon {
+  cursor: pointer;
+
+  i {
+    svg {
+      path {
+        opacity: 0.5;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+
+  &:hover {
+    i {
+      svg {
+        path {
+          opacity: 1;
+          fill: rgb(255, 0, 0);
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.gray {
+  background: $gray;
+}
+
+.green {
+  background: $green;
+}
+
+.blue {
+  background: $blue;
+}
+
+.pink {
+  background: $pink;
+}
+
+.light-green {
+  background: $light-green;
+}
+
+.purple {
+  background: $purple;
+}
+
+.black {
+  background: $black;
+}
+
+.orange {
+  background: $orange;
+}
