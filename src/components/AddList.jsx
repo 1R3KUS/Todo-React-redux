@@ -27,7 +27,7 @@ function AddLIst() {
         addListAction({
           name: inputText,
           colors: colors[activeColor],
-          id: items.map((item) => item.id).pop() + 1,
+          id: items.length ? items.map((item) => item.id).pop() + 1 : 0,
         }),
       );
       setInputText('');

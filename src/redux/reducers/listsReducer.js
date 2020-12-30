@@ -35,12 +35,15 @@ const listsReducer = (state = initialState, action) => {
       };
 
     case 'REMOVE_LIST': {
-      const newState = [...state.items];
+      const newStateItems = [...state.items];
+      const newTasksItems = [...state.tasks];
 
-      const newItems = newState.filter((item) => item.id !== action.payload);
+      const newItems = newStateItems.filter((item) => item.id !== action.payload);
+      const newTasks = newTasksItems.filter((item) => item.listId !== action.payload);
       return {
         ...state,
         items: newItems,
+        tasks: newTasks,
       };
     }
     case 'ACTIVE_LIST': {

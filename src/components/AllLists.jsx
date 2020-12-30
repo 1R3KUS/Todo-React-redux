@@ -10,7 +10,6 @@ function AllLists({ items }) {
 
   const removeList = (id) => {
     dispatch(removeListAction(id));
-    console.log(items);
   };
 
   const activeList = (id, index) => {

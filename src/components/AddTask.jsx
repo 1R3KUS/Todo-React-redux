@@ -15,7 +15,7 @@ function AddTask() {
     dispatch(
       addTaskAction({
         text: inputText,
-        id: tasks.map((item) => item.id).pop() + 1,
+        id: tasks.length ? tasks.map((item) => item.id).pop() + 1 : 0,
         listId: activeList,
       }),
     );
